@@ -3,7 +3,8 @@
 using namespace std;
 
 
-BaseObject::BaseObject() {
+BaseObject::BaseObject()
+{
     p_object == NULL;
     rect_object.x = 0;
     rect_object.y = 0;
@@ -12,8 +13,9 @@ BaseObject::BaseObject() {
 
 }
 
-BaseObject::~BaseObject() {
-
+BaseObject::~BaseObject()
+{
+    Free();
 }
 
 bool BaseObject::LoadImg(const char* path, SDL_Renderer* screen) {
@@ -45,7 +47,7 @@ bool BaseObject::LoadImg(const char* path, SDL_Renderer* screen) {
 
 // thong so cua new_texture da duoc gan cho p_object,sau ham LoadImg, doi tuong thuoc class BaseObject da co thong tin ve kich co va texture cua tam anh
 
-void BaseObject::Render(SDL_Renderer* des, SDL_Rect* clip /*= NULL */ ) {
+void BaseObject::Render(SDL_Renderer* des, const SDL_Rect* clip /*= NULL */ ) {
     SDL_Rect renderquad= {rect_object.x, rect_object.y, rect_object.w, rect_object.h};
      // bao gom thong tin ve vi tri tam anh va kich thuoc cua tam anh
 
@@ -53,5 +55,15 @@ void BaseObject::Render(SDL_Renderer* des, SDL_Rect* clip /*= NULL */ ) {
 
 }
 
+void BaseObject::Free()
+{
+    if (p_object != NULL)
+    {
+        SDL_DestroyTexture(p_object);
+        p_object = NULL;
+        rect_object.w = 0;
+        rect_object.h = 0;
+    }
+}
 
 

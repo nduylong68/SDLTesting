@@ -13,7 +13,7 @@ using namespace std;
 
 static SDL_Window *g_window = NULL; // build a window form for game
 static SDL_Renderer* g_screen = NULL;
-static SDL_Event* g_event; // event accept mouse, keyboard
+static SDL_Event g_event; // event accept mouse, keyboard
 
 //SCREEN
 
@@ -27,6 +27,20 @@ const int color_key_b = 180;
 
 
 
+#define TILE_SIZE 64
+#define MAX_MAP_X 400
+#define MAX_MAP_Y 10
 
+typedef struct Map
+{
+    int start_x;
+    int start_y;
+
+    int max_x;
+    int max_y;
+
+    int tile[MAX_MAP_Y][MAX_MAP_X];
+    char* file_name;
+};
 
 #endif // COMMON_FUNCTION_H

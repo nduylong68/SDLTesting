@@ -21,3 +21,37 @@
 	"Common_function.h"
 	<iostream>
 
+1552919459 source:e:\github\sdltesting\testsdlgame\common_function.cpp
+	"Common_function.h"
+
+1552919931 e:\github\sdltesting\testsdlgame\common_function.h
+	<windows.h>
+	<string>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+
+1552919931 source:e:\github\sdltesting\testsdlgame\main.cpp
+	<SDL.h>
+	<SDL_image.h>
+	"Common_function.h"
+	"ObjectBase.h"
+	"map_game.h"
+
+1552919931 e:\github\sdltesting\testsdlgame\objectbase.h
+	"Common_function.h"
+	<iostream>
+
+1552920148 e:\github\sdltesting\testsdlgame\map_game.h
+	"Common_function.h"
+	"ObjectBase.h"
+
+1552920148 source:e:\github\sdltesting\testsdlgame\map_game.cpp
+	"map_game.h"
+	<iostream>
+	<stdio.h>
+
+1552919931 source:e:\github\sdltesting\testsdlgame\objectbase.cpp
+	"ObjectBase.h"
+
