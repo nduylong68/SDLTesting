@@ -29,7 +29,7 @@ const int color_key_b = 180;
 
 #define TILE_SIZE 64
 #define MAX_MAP_X 400
-#define MAX_MAP_Y 10
+#define MAX_MAP_Y 15
 
 typedef struct Map
 {

@@ -24,7 +24,7 @@ bool BaseObject::LoadImg(const char* path, SDL_Renderer* screen) {
     SDL_Surface* load_surface = IMG_Load(path);
     if (load_surface == NULL) { cout << " FAIL TO LOAD SURFACE !!" << endl; }
     else {
-        SDL_SetColorKey(load_surface, SDL_TRUE, SDL_MapRGB(load_surface->format, color_key_b, color_key_g, color_key_r));
+        SDL_SetColorKey(load_surface, SDL_TRUE, SDL_MapRGB(load_surface->format, color_key_r, color_key_g, color_key_b));
         // Color key dung de xoa di phan background trong anh cua nhan vat
 
         new_texture = SDL_CreateTextureFromSurface(screen, load_surface); // Dung de chuyen surface thanh texture
