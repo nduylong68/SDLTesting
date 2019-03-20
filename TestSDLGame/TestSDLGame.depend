@@ -24,7 +24,7 @@
 1552919459 source:e:\github\sdltesting\testsdlgame\common_function.cpp
 	"Common_function.h"
 
-1553005481 e:\github\sdltesting\testsdlgame\common_function.h
+1553056987 e:\github\sdltesting\testsdlgame\common_function.h
 	<windows.h>
 	<string>
 	<SDL.h>
@@ -32,14 +32,15 @@
 	<SDL_mixer.h>
 	<SDL_ttf.h>
 
-1552919931 source:e:\github\sdltesting\testsdlgame\main.cpp
+1553056987 source:e:\github\sdltesting\testsdlgame\main.cpp
 	<SDL.h>
 	<SDL_image.h>
 	"Common_function.h"
 	"ObjectBase.h"
 	"map_game.h"
+	"MainPlayer.h"
 
-1552919931 e:\github\sdltesting\testsdlgame\objectbase.h
+1553057550 e:\github\sdltesting\testsdlgame\objectbase.h
 	"Common_function.h"
 	<iostream>
 
@@ -53,5 +54,14 @@
 	<stdio.h>
 
 1553005736 source:e:\github\sdltesting\testsdlgame\objectbase.cpp
+	"ObjectBase.h"
+
+1553056987 e:\github\sdltesting\testsdlgame\mainplayer.h
+	"Common_function.h"
+	"ObjectBase.h"
+
+1553058477 source:e:\github\sdltesting\testsdlgame\mainplayer.cpp
+	"MainPlayer.h"
+	"Common_function.h"
 	"ObjectBase.h"
 

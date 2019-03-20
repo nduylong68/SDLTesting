@@ -3,6 +3,7 @@
 #include"Common_function.h"
 #include"ObjectBase.h"
 #include"map_game.h"
+#include"MainPlayer.h"
 
 BaseObject g_background;
 using namespace std;
@@ -76,6 +77,10 @@ int main(int argc, char* argv[] ) {
     game_map.LoadTiles(g_screen);
 
 
+    MainPlayer p_player;
+    p_player.LoadImg("Pic/player_right.png", g_screen);
+    p_player.set_clip();
+
 
     bool is_quit = false;
 
@@ -88,13 +93,19 @@ int main(int argc, char* argv[] ) {
                 is_quit = true;
                 cout << " Shut down" << endl;
             }
+
+            p_player.HandleInputAction(g_event, g_screen);
         }
+
 
         SDL_SetRenderDrawColor(g_screen, 255, 255, 255, 255);
         SDL_RenderClear(g_screen);
 
         g_background.Render(g_screen, NULL);
         game_map.DrawMap(g_screen);
+
+
+        p_player.Show(g_screen);
 
 
         SDL_RenderPresent(g_screen);

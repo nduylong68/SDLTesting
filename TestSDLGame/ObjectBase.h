@@ -21,13 +21,13 @@ public :
     SDL_Rect GetRect() const { return rect_object; } // ham lay ra size cua hinh anh
     SDL_Texture* GetObject() const { return p_object;} // ham lay ra hinh anh
 
-    bool LoadImg(const char* path, SDL_Renderer* screen);
+    virtual bool LoadImg(const char* path, SDL_Renderer* screen); // virtual the hien day la ham ao;
     void Render(SDL_Renderer* des, const SDL_Rect* clip = NULL);
     void Free();
 
 
 
-private :
+//private :
     SDL_Texture* p_object; // bien chuyen luu tru hinh anh
     SDL_Rect rect_object; // bien chuyen luu tru size cua hinh anh
 

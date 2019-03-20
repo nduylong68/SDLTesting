@@ -31,6 +31,19 @@ const int color_key_b = 180;
 #define MAX_MAP_X 400
 #define MAX_MAP_Y 15
 
+
+const int FrameSize = 8;
+typedef struct Input // cau truc danh cho viec di chuyen
+{
+    int left;
+    int right;
+    int up;
+    int down;
+    int jump;
+};
+
+
+
 typedef struct Map
 {
     int start_x;
