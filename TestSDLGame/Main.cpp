@@ -103,8 +103,9 @@ int main(int argc, char* argv[] ) {
 
         g_background.Render(g_screen, NULL);
         game_map.DrawMap(g_screen);
+        Map MapData = game_map.GetMap();
 
-
+        p_player.DoPlayer(MapData);
         p_player.Show(g_screen);
 
 

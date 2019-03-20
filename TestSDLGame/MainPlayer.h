@@ -23,6 +23,11 @@ public:
     void HandleInputAction(SDL_Event events, SDL_Renderer* screen); // ham de nhan ban phim
     void set_clip(); // xu li ve animation
 
+    void DoPlayer(Map& map_data); // ham de cong tru di luong cho nhan van di chuyen, can truyen vao ban do de check;
+    void CheckToMap(Map& map_data);
+
+    bool on_ground;
+
 
 private:
     float x_val; // khi an sang phai sang trai mot luong x
